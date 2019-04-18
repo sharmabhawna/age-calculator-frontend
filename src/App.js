@@ -61,7 +61,7 @@ class App extends Component {
 					<main>
 						<section>
 							<label> Date of birth : </label>
-							<input type="text" id="date-of-birth" />
+							<input type="date" id="date-of-birth" />
 						</section>
 						<button onClick={this.calculateAge}>Submit</button>
 					</main>
