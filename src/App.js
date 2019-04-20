@@ -30,9 +30,9 @@ class App extends Component {
 
 	getBirthDay(dateOfBirth) {
 		const birthDay = {
-			month: +dateOfBirth.split("/")[0],
-			date: +dateOfBirth.split("/")[1],
-			year: +dateOfBirth.split("/")[2]
+			year: +dateOfBirth.split("-")[0],
+			month: +dateOfBirth.split("-")[1],
+			date: +dateOfBirth.split("-")[2]
 		};
 		return birthDay;
 	}
@@ -46,7 +46,9 @@ class App extends Component {
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(birthDay)
 		})
-			.then(res => res.json())
+			.then(res => {
+				res.json();
+			})
 			.then(age => {
 				this.setState({ age, visitorsCount: this.state.visitorsCount });
 			});
