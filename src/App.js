@@ -30,8 +30,8 @@ class App extends Component {
 
 	getBirthDay(dateOfBirth) {
 		const birthDay = {
-			date: +dateOfBirth.split("/")[0],
-			month: +dateOfBirth.split("/")[1],
+			month: +dateOfBirth.split("/")[0],
+			date: +dateOfBirth.split("/")[1],
 			year: +dateOfBirth.split("/")[2]
 		};
 		return birthDay;
