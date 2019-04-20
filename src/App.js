@@ -46,9 +46,7 @@ class App extends Component {
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify(birthDay)
 		})
-			.then(res => {
-				res.json();
-			})
+			.then(res => res.json())
 			.then(age => {
 				this.setState({ age, visitorsCount: this.state.visitorsCount });
 			});
